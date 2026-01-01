@@ -1,0 +1,576 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wheather.css">
+
+    <style>
+        /* Apply box-sizing globally */
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0; /* Remove default body margin */
+        }
+
+        .H, .B, .L, .C {
+            font-size: 22px;
+            color: white; 
+            padding-left: 25px; /* Adjusted padding */
+            z-index: 2;
+            position: relative;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 9px;
+        }
+
+        .background {
+            background-image: url('kkk.jpg');
+            width: 100%;
+            height: 600px;
+            margin: 0;
+            padding: 12px;
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end; /* Align items to the right */
+            color: white;
+            background-size: cover; /* Ensure the image covers the entire background area */
+            background-position: center; /* Center the image */
+            position: relative;
+        }
+
+        .background::before {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+            position: absolute;
+            content: '';
+        }
+        
+        .background h1 {
+            color: white;
+            position: relative;
+            z-index: 2;
+            right: 0; /* Aligns the element to the right side */
+            margin-right: 20px; /* Add some margin to the right for spacing */
+            top: 40px;
+            text-align: right; /* Align text to the right */
+        }
+
+        .background h2 {
+            font-size: 39px;
+            color: white;
+            position: relative;
+            z-index: 2;
+            right: 0; /* Aligns the element to the right side */
+            margin-right: 20px; /* Add some margin to the right for spacing */
+            top: 40px;
+            font-style: serif;
+            text-align: right; /* Align text to the right */
+        }
+
+        .navbar {
+            background-color: black;
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+            padding: 10px 20px; /* Add padding for spacing */
+            width: 100%; /* Use percentage width */
+            position: relative; /* Added relative positioning */
+            z-index: 2;
+        }
+
+        .hamburger {
+            cursor: pointer;
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            position: absolute; /* Positioned absolutely within the navbar */
+            left: 20px; /* Adjusted position to align with the navbar */
+        }
+
+        .hamburger div {
+            background-color: white; /* Changed color to white for better visibility */
+            height: 4px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        .hamburger div:nth-child(1) {
+            top: 0;
+        }
+
+        .hamburger div:nth-child(2) {
+            top: 8px;
+        }
+
+        .hamburger div:nth-child(3) {
+            top: 16px;
+        }
+
+        .menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    width: 240px;
+    background-color: #333333;
+    color: white;
+    padding: 25px;
+    font-size: 29px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    z-index: 2;
+    overflow-y: auto; /* Add scroll if content exceeds max-height */
+}
+
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 30px 0;
+        }
+
+        .learnmore {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: green; 
+            border: 2px solid black;
+            margin-left: 100px;
+            margin-top: 100px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .learnmore:hover {
+            background-color: transparent;
+        }
+
+        .b2 {
+            background-color: rgb(8, 50, 8);
+            height: 900px;
+            padding: 20px;
+            margin-top: 120px;
+            text-align: center;
+            font-size: 29px;
+        }
+
+        .b2 h1, .b2 h2 {
+            color: white;
+        }
+
+        .b2 h2 {
+            font-weight: 2;
+            font-size: 25px;
+            padding: 20px;
+        }
+        .W {
+            font-size: 22px;
+            color: white; 
+            padding-left: 25px; /* Adjusted padding */
+            z-index: 2;
+            position: relative;
+            height: 50px;
+            text-align: center;
+            text-decoration: none;
+            padding-top: 9px;
+        }
+
+        .circle {
+            width: 450px; /* Diameter of the circle */
+            height: 450px; /* Diameter of the circle */
+            border-radius: 50%; /* Makes it a circle */
+            border: 5px solid #34db71; /* Border width and color */
+            background-color: transparent; /* Make the circle transparent inside */
+            position: absolute; /* Needed for positioning pointers */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 150px;
+            margin-left: 470px;
+        }
+
+        .circle ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center the text within the list */
+            position: relative; /* Ensure list is on top of pointers */
+            z-index: 1;
+        }
+
+        .circle li {
+            position: relative; /* For positioning the hyphen */
+            padding-left: 20px; /* Space for the hyphen */
+            color: white;
+            padding-top: 29px;
+            font-size: 36px;
+        }
+
+        .circle li::before {
+            content: '-'; /* Use a hyphen or en dash */
+            position: absolute;
+            left: 0; /* Position the hyphen on the left side */
+            color: white; /* Optional: change the color of the hyphen */
+        }
+        
+        .b3 {
+            display: flex; /* Aligns children side by side */
+            height: 100vh; /* Full viewport height */
+            width: 100vw; /* Full viewport width */
+        }
+        
+        .left-half, .right-half {
+            flex: 1; /* Each half takes up half the width */
+            justify-content: center; /* Centers text horizontally */
+            align-items: center; /* Centers text vertically */
+            font-size: 24px; /* Adjust text size */
+            color: white; /* Text color */
+            margin-top: 30px;
+        }
+        
+        .left-half {
+            background-color: #1f7119; /* Background color for the left half */
+        }
+
+        .left-half h1 {
+            font-size: 50px;
+            margin-top: 90px;
+            margin-left: 39px; /* Adjust margin as needed */
+            color: white; /* Text color */
+            text-align: center;
+        }
+
+        .left-half p {
+            font-size: 25px;
+            margin-left: 39px; /* Adjust margin as needed */
+            color: white; /* Text color */
+            line-height: 30px;
+            font-weight: 2px;
+            text-align: center;
+        }
+        
+        .right-half {
+            background-color: #1f7119; /* Background color for the right half */
+        }
+
+        .right-half ul {
+            margin: 100px;
+            text-align: left;
+            margin-left: 29px;
+            font-size: 30px;
+            line-height: 80px;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Adds smooth scrolling */
+        }
+
+        /* Language Modal */
+        #languageModal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            z-index: 999; /* High z-index to appear on top */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .modal-content button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .bell-icon {
+    position: relative;
+    font-size: 24px; /* Adjust size as necessary */
+    color: white;
+    padding: 0 15px;
+    text-decoration: none;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 14px;
+    display: none; /* Hidden by default */
+}
+
+.bell {
+    position: relative;
+    top: 3px;
+}
+
+
+        /* Notification Styling */
+       /* Notification Styling */
+.notification {
+position: fixed;
+bottom: 20px; /* Distance from the bottom of the viewport */
+right: 20px; /* Distance from the right of the viewport */
+background-color: #333; /* Dark background color */
+color: white; /* White text color */
+padding: 20px 30px; /* Increased padding inside the notification */
+border-radius: 8px; /* Increased border-radius for more rounded corners */
+box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Increased shadow for better visibility */
+display: none; /* Hidden by default */
+font-size: 18px; /* Increased font size of the notification text */
+z-index: 1000; /* High z-index to make sure it's above other elements */
+max-width: 400px; /* Optional: Set a maximum width for the notification */
+text-align: center; /* Center-align text */
+}
+
+.notification.show {
+display: block; /* Show the notification when the class 'show' is added */
+}
+
+.notification button {
+background-color: #ff5733; /* Button background color */
+border: none; /* Remove default border */
+color: white; /* Text color of the button */
+padding: 8px 15px; /* Increased padding inside the button */
+border-radius: 5px; /* Rounded corners for the button */
+cursor: pointer; /* Pointer cursor on hover */
+margin-top: 10px; /* Space between text and button */
+font-size: 18px; /* Increased font size of the button text */
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <a class="H" href="TRY.html">HOME</a>
+        <a class="L" href="s1.html">LOGIN</a>
+        <a class="B" href="analysis 1.html">ANALYSIS</a>
+        <a class="W" href="index.html">WEATHER</a>
+        <a class="C" href="a.html">CONTACT US</a>
+       
+<a class="bell-icon" href="#"><span class="bell">🔔</span><span class="notification-badge" id="notificationCount">1</span></a>
+
+        
+    </div>   
+    <div class="menu">
+        <a href="yieldprediction.html">Yield Prediction System</a>
+        <a href="farmer.html">Price Prediction System</a>
+        <a href="#whom-we-serve">Whom We Serve</a>
+        <a href="#advantages">Advantages</a>
+        
+        <a href="#">About Us</a>
+        <a href="#">Resources</a>
+    </div>
+    <div class="background">
+        <h1 class="headline">OPTIMISE YOUR<br> FARMING STRATEGY</h1>
+        <h2 class="subheadline">Get Accurate Crop Price<br> Predictions Today</h2>
+    </div>
+    <div class="b2" id="whom-we-serve">
+        <h1>WHOM WE SERVE</h1>
+        <h2>CropPredictor offers advanced features that help agribusiness professionals and traders mitigate price volatility and seize profitable opportunities in the crop market.</h2>
+        
+        <div class="circle">
+            <ul>
+                <li>Traders & Agribusiness</li>
+                <li>Farmers</li>
+                <li>Government Sectors</li>
+                <li>Investors</li>
+            </ul>
+        </div>
+    </div>
+    <div class="b3" id="advantages">
+        <div class="left-half">
+            <h1>Crop Predict Advantages</h1>
+            <p>With a robust history of precise crop price predictions and a deep understanding of market trends, CropPredictor equips you with actionable insights for strategic risk management and informed market decisions.</p>
+        </div>
+        <div class="right-half">
+            <ul>
+                <li>Tailored Statistical Learning Methods</li>
+                <li>Comprehensive Out-of-Sample Performance Testing</li>
+                <li>Flexible Visualization Tools</li>
+                <li>Dynamic Risk Assessment Models</li>
+                <li>Automated Alerts and Notifications</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Language Selection Modal -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <h2>Please choose your language</h2>
+            <button onclick="setLanguage('English')">English</button>
+            <button onclick="setLanguage('Bengali')">বাংলা</button>
+            <button onclick="setLanguage('Tamil')">தமிழ்</button>
+            <button onclick="setLanguage('Hindi')">हिन्दी</button>
+            <button onclick="setLanguage('Telugu')">తెలుగు</button>
+        </div>
+    </div>
+
+    <!-- Price Notification -->
+    <div id="priceNotification" class="notification">
+        THE PRICE OF WHEAT IS INCREASING. KNOW MORE.
+        <button onclick="dismissNotification()">OK</button>
+    </div>
+
+    <script>
+        // Toggle menu on hamburger click
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+
+        // Show language selection modal on page load
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('priceNotification').classList.add('show');
+            }, 3000); // 3000 milliseconds = 3 seconds
+
+            document.getElementById('languageModal').style.display = 'flex';
+        };
+
+        // Set language and hide modal
+        function setLanguage(language) {
+            alert('Language set to ' + language);
+            document.getElementById('languageModal').style.display = 'none';
+        }
+
+        // Function to dismiss the notification
+        function dismissNotification() {
+            document.getElementById('priceNotification').classList.remove('show');
+        }
+    </script>
+    <script>
+        // Toggle menu on hamburger click
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            var menu = document.querySelector('.menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        });
+    
+        // Show language modal immediately and price notification after 5 seconds
+        window.onload = function() {
+            // Show language modal immediately when the page loads
+            document.getElementById('languageModal').style.display = 'flex';
+    
+            // Show price notification after 5 seconds (5000 milliseconds)
+            setTimeout(function() {
+                document.getElementById('priceNotification').classList.add('show');
+            }, 5000); // 5000 milliseconds = 5 seconds
+        };
+    
+        // Set language and hide modal
+        function setLanguage(language) {
+            alert('Language set to ' + language);
+            document.getElementById('languageModal').style.display = 'none';
+        }
+    
+        // Function to dismiss the notification
+        function dismissNotification() {
+            document.getElementById('priceNotification').classList.remove('show');
+        }
+        window.onload = function() {
+    // Show language modal immediately when the page loads
+    document.getElementById('languageModal').style.display = 'flex';
+
+    // Show price notification after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        document.getElementById('priceNotification').classList.add('show');
+        document.getElementById('notificationCount').style.display = 'inline'; // Show the badge with "1"
+    }, 5000); // 5000 milliseconds = 5 seconds
+};
+
+// Set language and hide modal
+function setLanguage(language) {
+    alert('Language set to ' + language);
+    document.getElementById('languageModal').style.display = 'none';
+}
+
+// Function to dismiss the notification
+function dismissNotification() {
+    document.getElementById('priceNotification').classList.remove('show');
+    document.getElementById('notificationCount').style.display = 'none'; // Hide the badge when dismissed
+}
+// Toggle menu on hamburger click
+document.querySelector('.hamburger').addEventListener('click', function() {
+    var menu = document.querySelector('.menu');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'block';
+    }
+});
+
+// Show language modal immediately and price notification after 5 seconds
+window.onload = function() {
+    // Show language modal immediately when the page loads
+    document.getElementById('languageModal').style.display = 'flex';
+
+    // Show price notification after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        document.getElementById('priceNotification').classList.add('show');
+        document.getElementById('notificationCount').style.display = 'inline'; // Show the badge with "1"
+    }, 5000); // 5000 milliseconds = 5 seconds
+};
+
+// Set language and hide modal
+function setLanguage(language) {
+    alert('Language set to ' + language);
+    document.getElementById('languageModal').style.display = 'none';
+}
+
+// Function to dismiss the notification
+function dismissNotification() {
+    document.getElementById('priceNotification').classList.remove('show');
+    document.getElementById('notificationCount').style.display = 'none'; // Hide the badge when dismissed
+}
+
+
+    </script>
+    
+</body>
+</html>

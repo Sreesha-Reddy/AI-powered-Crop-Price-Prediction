@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Box Example</title>
+    <link rel="stylesheet" href="graph box style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <button id="info-button">Show Info</button>
+    
+
+    <div class="info-box" id="state-info-box" style="display: none;">
+        <h2>State Information</h2>
+        <!-- Place the pie chart canvas here -->
+        <canvas id="pie-chart" width="300" height="300"></canvas>
+        <button id="close-button">Close</button>
+    </div>
+
+    <script>
+        const infoButton = document.getElementById('info-button');
+        const infoBox = document.getElementById('info-box');
+        const stateInfoBox = document.getElementById('state-info-box');
+        const closeButton = document.getElementById('close-button');
+        const pieChartCanvas = document.getElementById('pie-chart');
+
+        
+        let pieChart;
+
+        
+        infoButton.addEventListener('click', () => {
+            // Toggle the visibility of the info box
+            if (infoBox.style.display === 'none' || infoBox.style.display === '') {
+                infoBox.style.display = 'block';
+            } else {
+                infoBox.style.display = 'none';
+            }
+        });
+
+        // Chart data (replace with your own data)
+        const chartData = {
+            labels: ['Label 1', 'Label 2', 'Label 3'],
+            datasets: [{
+                data: [30, 40, 30],
+                backgroundColor: ['red', 'green', 'blue'],
+            }],
+        };
+
+        // Function to create and update the pie chart
+        function createPieChart(data) {
+            if (pieChart) {
+                // If the chart already exists, destroy it first
+                pieChart.destroy();
+            }
+
+            pieChart = new Chart(pieChartCanvas, {
+                type: 'pie',
+                data: data,
+            });
+        }
+
+        // Add a click event listener to the close button
+        closeButton.addEventListener('click', () => {
+            stateInfoBox.style.display = 'none';
+        });
+
+        // Simulated click event for demonstration (replace with your logic)
+        infoButton.addEventListener('click', () => {
+            stateInfoBox.style.display = 'block';
+            createPieChart(chartData);
+        });
+    </script>
+</body>
+</html>

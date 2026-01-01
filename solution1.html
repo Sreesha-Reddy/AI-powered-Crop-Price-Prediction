@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="logo18.png" />
+    <title>Solution</title>
+    <link rel="stylesheet" href="solution1.css">
+    <script>
+        function scrollToSection1() {
+            var section = document.getElementById('financial');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToSection2() {
+            var section = document.getElementById('health');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToSection3() {
+            var section = document.getElementById('child');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToSection4() {
+            var section = document.getElementById('gender');
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+    </script>
+    </head>
+    <body>
+        <section class="header">
+            <header>
+                <img src="logo.png" class="logo">
+                <ul class="sidebar">
+                    <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> </li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">ABOUT US</a></li>
+                    <li><a href="analysis 1.html">ANALYSIS</a></li>
+                    <li><a href="solution1.html">OUR HELP</a></li>
+                    <li><a href="index.html">CONTACT US</a></li>
+                </ul>
+                <ul>
+                    <li class="hidemobile"><a href="index.html">HOME</a></li>
+                    <li class="hidemobile"><a href="index.html">ABOUT US</a></li>
+                    <li class="hidemobile"><a href="analysis 1.html">ANALYSIS</a></li>
+                    <li class="hidemobile"><a href="solution1.html">OUR HELP</a></li>
+                    <li class="hidemobile"><a href="index.html">CONTACT</a></li>
+                    <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </ul>
+            </header>
+            <script>
+                function showSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display='flex'
+                }
+                function hideSidebar(){
+                    const sidebar = document.querySelector('.sidebar')
+                    sidebar.style.display='none'
+                }
+            </script>
+        </section>
+        <section class="banner">
+                <div class="content">
+                    <h1>FIRST STEP TO SUCCESS</h1>
+                </div>
+        </section>
+
+        <section class="problems">
+            <h2>Insights from our Analysis: Identifying Key Challenges</h2>
+            <p>Our analysis on dropout rates offers an insight into education system of India. Through these maps, graphs and charts, it highlights the factors contributing to student dropouts, helping policymakers and educators take proper initiatives to improve these rates so that  every child has a standard education regardless their background</p>
+            <div class = "row">
+                <div class = "col">
+                    <ul>
+                        <li>Financial</li>
+                        <li>Gender Discrimination</li>
+                        <li>Physical Or Mental Health Issues</li>
+                        <li>Family Problems</li>
+                        <li>Early Marriage</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul>
+                        <li>Work Demands</li>
+                        <li>Cultural and Language Barriers</li>
+                        <li>Peer Pressure and Social Issues</li>
+                        <li>Lack of Motivation</li>
+                        <li>Academic Struggles</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="shit">
+                <p>Though there are many problems identified for students to drop out school. We would like to focus on these 4 major issues faced by drop out students.</p>
+            </div>
+        </section>
+        <section class="content">
+            <button onclick="scrollToSection1()"><span></span>FINANCIAL HELP</button>
+            <button onclick="scrollToSection2()"><span></span>HEALTH</button>
+            <button onclick="scrollToSection3()"><span></span>CHILD LABOUR</button>
+            <button onclick="scrollToSection4()"><span></span>GENDER BIAS</button>
+        </section>
+        
+        <section class="problem" id="financial">
+            <h3>FINANCIAL HELP</h3>
+            <p>Financial barriers often deter students from pursuing higher education and can lead to increased dropout rates. This webpage explores the pivotal role that financial assistance programs play in reducing dropout rates and ensuring equitable access to education.</p>
+            <div class="row">
+                <div class="col1">
+                    <img src="b.jpg" class="f12" width="370px">
+                    <p>Art of Living provides upto 1096 <a href="https://www.artofliving.org/in-en/projects/education/free-schools">free schools</a> for students to study and enhance. </p>
+                </div>
+                <div class="col1">
+                    <img src="e.jpg",class="f12" width="370px">
+                    <p>Take a gap year rather than dropping out altogether, in order to get your finances in order.</p>
+                </div>
+                <div class="col1">
+                    <img src="d.jpg",class="f12" width="370px">
+                    <p><a href="https://scholarships.gov.in/">Scholarships</a> and grants provide financial aid that doesn't need to be repaid.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem" id="health">
+            <h3>HEALTH</h3>
+            <h4>PHYSICAL HEALTH</h4>
+            <p>Children dropping out of school due to improper health is a serious issue that needs to be addressed comprehensively. It involves not only the child's health but also their access to education and support systems.</p>
+            <div class="row">
+                <div class="col2">
+                    <img src="1.jpeg" class="f12" width="270px">
+                    <p>The Pradhan Mantri Poshan Shakti Nirman (PM POSHAN), earlier known as the Mid-Day Meal Scheme, is one of the flagship central government programmes, launched to look into the students health and well-being.</p>
+                </div>
+                <div class="col2">
+                    <img src="akshay.jpeg",class="f12" width="270px">
+                    <p><a href="https://akshayapatra.com/">Akshaya Patra</a> combats malnutrition by offering mid-day meals in schools, supporting students from low-income families with access to nutritious food, enhancing their well-being and education prospects.</p>
+                </div>
+                <div class="col2">
+                    <img src="smile.jpeg",class="f12" width="270px">
+                    <p><a href="https://smilefoundationindia.org">Smile Foundation</a> operates various healthcare programs, including mobile health vans that provide free healthcare services to underserved communities, including school children, promoting wellness and access.</p>
+                </div>
+                <div class="col2">
+                    <img src="j.jfif",class="f12" width="270px">
+                    <p>Implement health education programs in schools to teach children about hygiene, nutrition, and the importance of a healthy lifestyle, preventing diseases caused by bacteria or insects effectively.</p>
+                </div>
+                
+            </div>
+
+            <h4>MENTAL HEALTH</h4>
+            <p>Children dropping out of school due to improper mental health is a complex issue that requires a multifaceted approach involving schools, families, and the community. </p>
+            <div class="row">
+                <div class="col1">
+                    <img src="z.jpeg" class="f12" width="370px">
+                    <p>Incorporate mental health education into the school curriculum to raise awareness and reduce stigma. Teach students about stress management, coping skills, and emotional well-being.</p>
+                </div>
+                <div class="col1">
+                    <img src="mental2.jpeg",class="f12" width="370px">
+                    <p>Establish peer support programs where students can connect with and support each other. Train student leaders to recognize signs of mental distress and provide peer counseling.</p>
+                </div>
+                <div class="col1">
+                    <img src="bully.jpg",class="f12" width="370px">
+                    <p>Implement comprehensive anti-bullying programs to create a safe and supportive school environment. Address bullying and cyberbullying, which can significantly impact a child's mental health.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="problem" id="child">
+            <h3>CHILD LABOUR</h3>
+            <p>Many families living in poverty rely on the income generated by their children to meet basic needs like food, shelter, and clothing. This economic necessity often takes precedence over education.</p>
+            <div class="row">
+                <div class="col2">
+                    <img src="u.jpeg" class="f12" width="270px">
+                    <p>Support families in recognizing education's significance and persuade them that educating their children can lead to a brighter future. Empower them with hope for improved lives through education, fostering a commitment to their children's learning.</p>
+                </div>
+                <div class="col2">
+                    <img src="child.jpg",class="f12" width="270px">
+                    <p><a href="https://www.childlineindia.org/a/about/childline-india#:~:text=CHILDLINE%201098,need%20of%20aid%20and%20assistance.">CHILDLINE 1098 </a> not only addresses immediate child emergencies but also connects them with appropriate services for long-term care and rehabilitation, ensuring holistic support and a brighter future for vulnerable children.</p>
+                </div>
+                <div class="col2">
+                    <img src="i.jfif",class="f12" width="270px">
+                    <p>The Right of Children to Free and Compulsory Education (RTE) Act, 2009: This act mandates free and compulsory education for all children between the ages of 6 and 14. It prohibits the employment of children in any form of work, including domestic labor, that hinders their education.</p>
+                </div>
+                <div class="col2">
+                    <img src="c.jfif",class="f12" width="270px">
+                    <p>The Child Labour (Prohibition and Regulation) Act, 1986: This act is the primary legislation addressing child labor in India. It prohibits the employment of children below the age of 14 in specified hazardous occupations and processes.</p>
+            </div>
+        </section>
+        
+        <section class="problem" id="gender">
+            <h3>GENDER BIAS</h3>
+            <p>Addressing the issue of children, especially girls, dropping out of school due to gender discrimination is crucial for achieving educational equity. </p>
+            <div class="row">
+                <div class="col2">
+                    <img src="beti.png" class="f12" width="270px">
+                    <p>Beti Bachao, Beti Padhao Scheme is a government initiative that focuses on the welfare and empowerment of girls. It includes various components, one of which is providing financial support through scholarships.</p>
+                </div>
+                <div class="col2">
+                    <img src="08.webp",class="f12" width="270px">
+                    <p>
+                        Promoting menstrual hygiene involves offering gender-segregated toilets, sanitary facilities, and education. This ensures that menstruation does not impede access to education, empowering girls to excel academically while maintaining their dignity and well-being.</p>
+                </div>
+                <div class="col2">
+                    <img src="w.jfif",class="f12" width="270px">
+                    <p>Offering self-defense training to girls is crucial for empowering them, imparting skills to navigate dangerous situations confidently, and enhancing personal safety. This equips them to respond effectively and fosters a sense of empowerment and security.</p>
+                </div>
+                <div class="col2">
+                    <img src="t.jfif",class="f12" width="270px">
+                    <p><a href="https://www.educategirls.ngo/">Educate Girls</a> is a non-profit organization in India, that works towards girls' education in India's rural and educationally backward areas by mobilising communities. It has brought over 380,000 girls brought back to school.</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="she1">
+              <div class="she2">
+                <img src="logo.png" class="logo111">
+                <p>Shiksha Raksha-A one stop destination for educational empowerment and dropout prevention</p>
+              </div>
+              <div class="she3">
+                <h3 class="footermail">Email Address:</h3>
+                <p>shiksharaksha23@gmail.com</p>
+                <h3 class="footernumber">Contact Number:</h3>
+                <p>+91 9014075818</p>
+              </div>
+              <div class="she4">
+                <h3>Links <div class="underline"><span></span></div></h3>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.html">About us</a></li>
+                  <li><a href="analysis 1.html">Analysis</a></li>
+                  <li><a href="solution1.html">Our help</a></li>
+                  <li><a href="index.html">Contact</a></li>
+                </ul>
+              </footer>
+    </body>
+</html>

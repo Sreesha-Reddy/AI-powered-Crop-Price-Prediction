@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Crop Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('farmcom.jpg'); /* Add your image file path here */
+            background-size: cover; /* Ensure the background covers the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent background from repeating */
+            position: relative; /* Needed for positioning the overlay */
+        }
+        /* Blurred overlay */
+        .blur-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px); /* Adjust the blur level here */
+            background-color: rgba(255, 255, 255, 0.1); /* Optional: Adds a semi-transparent tint */
+        }
+        .header {
+            background-color: rgba(9, 9, 9, 0.9); /* Black background for header */
+            color: rgb(75, 187, 52);
+            padding-top: 20px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Adds a shadow to the header */
+
+        }
+        .header h1 {
+            margin: 0;
+            padding: 10px 0;
+        }
+        /* Navigation bar styles */
+        .navbar {
+            display: flex;
+            justify-content: right;
+            margin-top: 10px;
+        }
+        .navbar a {
+            color: rgb(67, 145, 34);
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        .dashboard-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            z-index: 1; /* Ensure this content is above the blur overlay */
+            position: relative;
+        }
+        .role-buttons {
+            margin-top: 20px;
+        }
+        .role-buttons button {
+            margin: 10px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            background-color: #60b325;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .role-buttons button:hover {
+            background-color: #5bac2c;
+        }
+    </style>
+</head>
+<body>
+    <div class="blur-overlay"></div>
+    <div class="header">
+        <h1>Crop Price Prediction Dashboard</h1>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a href="s1.html">Login</a>
+            <a href="analysis 1.html">Analysis</a>
+            <a href="index.html">Weather</a>
+            <a href="a.html">Contact Us</a>
+        </div>
+    </div>
+    <div class="dashboard-container">
+        <div class="role-buttons">
+            <section id="home">
+                <h2>Welcome to Crop Prediction</h2>
+                <p>Accurate crop yield forecasts to optimize your farming practices.</p>
+                <div id="choose-role">
+                    <h3>Select Your Role</h3>
+                    <a href="farmer.html"><button>Farmer</button></a>
+                    <a href="buyer.html"><button>Buyer</button></a>
+                </div>
+            </section> 
+        </div>
+    </div>
+   
+
+    <script>
+        function showFarmer() {
+            alert('Farmer button clicked');
+        }
+
+        function showConsumer() {
+            alert('Consumer button clicked');
+        }
+    </script>
+</body>
+</html>
+
+<head>

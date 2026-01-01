@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Prediction - Consumer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-image: url('w2.jpg');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .footer-top {
+            background-color: #0e0e0e;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #000;
+        }
+
+        .footer-top h1, .footer-top h2, .footer-top h3, .footer-top h4, .footer-top h5 {
+            margin: 0;
+            padding: 0 15px;
+            color: rgba(111, 178, 45, 0.8);
+            font-size: 25px;
+        }
+
+        /* Centering the main heading */
+        .main-heading {
+            text-align: center;
+            color: rgba(36, 59, 23, 0.9);
+            margin: 50px 0 20px 0;
+            font-size: 40px;
+            font-family: Arial, sans-serif;
+        }
+
+        .search-container {
+            background-color: rgba(76, 175, 80, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 1200px;
+            margin: 0 auto 20px auto;
+            backdrop-filter: blur(8px);
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin: 10px;
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            color: rgb(176, 54, 54);
+            margin-bottom: 5px;
+            display: block;
+            font-size: 18px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .search-bar button {
+            background-color: #125124;
+            color: #ddf1de;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .search-bar button:hover {
+            background-color: #5b6a8d;
+        }
+
+        /* Styles for the result section */
+        .result {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Footer-like section placed at the top -->
+    <div class="footer-top">
+        <a href="TRY.html" style="text-decoration: none;"><h1>Home</h1></a>
+        <a href="s1.html" style="text-decoration: none;"><h2>Login</h2></a>
+        <a href="analysis 1.html" style="text-decoration: none;"><h3>Analysis</h3></a>
+        <a href="a.html" style="text-decoration: none;"><h4>Contact Us</h4></a>
+        <a href="index.html" style="text-decoration: none;"><h5>Weather</h5></a>
+        
+    </div>
+
+    <!-- Main Heading -->
+    <h1 class="main-heading">Grow Smart: Forecast Crop Prices and Farm with Precision</h1>
+
+    <!-- Search Container -->
+    <div class="search-container">
+        <form class="search-bar">
+            <div class="form-group">
+                <label for="commodity">Commodity</label>
+                <input type="text" id="commodity" name="commodity" placeholder="Enter commodity name">
+            </div>
+
+            <div class="form-group">
+                <label for="season">Season</label>
+                <select id="season" name="season">
+                    <option value="">--Select--</option>
+                    <option value="summer">Summer</option>
+                    <option value="winter">Winter</option>
+                    <option value="monsoon">Monsoon</option>
+                    <option value="autumn">Autumn</option>
+                    <option value="spring">Spring</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="month">Month</label>
+                <select id="month" name="month">
+                    <option value="">--Select--</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State</label>
+                <select id="state" name="state">
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="market">Market</label>
+                <input type="text" id="market" name="market" placeholder="Enter market">
+            </div>
+
+            <div class="form-group">
+                <label for="district">District</label>
+                <input type="text" id="district" name="district" placeholder="Enter district">
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="searchButton">PREDICT</button>
+            </div>
+        </form>
+        
+        <!-- Result will be displayed here -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        // Event listener for the Predict button
+        document.getElementById("searchButton").addEventListener("click", function() {
+            // Sample output for the prediction
+            const resultText = "The wholesale price of the commodity is 40 Rs per kg.";
+            
+            // Displaying the result
+            document.getElementById("result").innerText = resultText;
+        });
+    </script>
+</body>
+</html>

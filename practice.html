@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="logo18.png" >
+    <title>Text-Analysis</title>
+    <link rel="stylesheet" href="practice.css">
+</head>
+<body>
+    <section class="header">
+        <header>
+            <img src="logo.png" class="logo">
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a> </li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html">ABOUT US</a></li>
+                <li><a href="#analysis">ANALYSIS</a></li>
+                <li><a href="solution1.html">OUR HELP</a></li>
+                <li><a href="index.html">CONTACT</a></li>
+            </ul>
+            <ul>
+                <li class="hidemobile"><a href="index.html">HOME</a></li>
+                <li class="hidemobile"><a href="index.html">ABOUT US</a></li>
+                <li class="hidemobile"><a href="#analysis">ANALYSIS</a></li>
+                <li class="hidemobile"><a href="solution1.html">OUR HELP</a></li>
+                <li class="hidemobile"><a href="index.html">CONTACT</a></li>
+                <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" ><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </header>
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display='flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display='none'
+            }
+        </script>
+    </section>
+
+    <div class="container">
+        <div class="msg-container">
+            <div id="slider">
+                <div class="msg-col">
+                    <h1>SCHOOL WISE</h1>
+                    <p>Schools with inadequate teaching resources, outdated curriculum, or poor infrastructure may fail to engage students, leading to higher dropout rates. Overcrowded classrooms and limited teacher-student interaction can hinder learning and increase dropout risk. Schools in economically disadvantaged areas may struggle to provide necessary resources, making it challenging for students to continue their education.</p>
+                    <a href="solution1.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>AREA WISE</h1>
+                    <p>The main reasons for dropouts of children are these states often have higher levels of poverty, and many families struggle to afford the costs associated with education, including school fees, books, uniforms, and transportation. The need for children to contribute to family income can lead to early dropouts. Many families in these states may not fully recognize the long-term benefits of education and the lack of proper infrastructure can also cause this.</p>
+                    <a href="solution1.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1> GENDER WISE</h1>
+                    <p>Girls in India confront educational barriers due to the unequal burden of household responsibilities, inadequate school resources, a lack of menstrual health education, and cultural taboos surrounding menstruation. These challenges often lead to school dropouts or extended absences, negatively affecting their academic progress and future prospects. Addressing these issues is essential for ensuring equal access to education and empowering girls to their potential.</p>
+                    <a href="solution1.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>CASTE WISE</h1>
+                    <p>Social issues, caste-based discrimination, and cultural factors can also play a significant role in dropout rates. Discrimination can discourage marginalized groups from pursuing education. These factors can cause children to have emotional scars and not have a healthy relationship with learning.</p>
+                    <a href="solution1.html">Learn More</a>
+                </div>
+                <div class="msg-col">
+                    <h1>STANDARD WISE</h1>
+                    <p>Many families struggle with poverty, and when students reach higher standards, the financial burden of education often becomes too heavy. Families may prioritize immediate income needs over continuing their child's education, leading to dropouts. Many students in rural areas may not fully understand the long-term benefits of higher education, leading to a lack of motivation to pursue education beyond a certain point.</p>
+                    <a href="solution1.html">Learn More</a>
+                </div>
+                
+            </div>
+        </div>
+        <div class="controller">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="line5"></div>
+            <div id="active"></div>
+        </div>
+    </div>
+    <script>
+        var slider=document.getElementById('slider');
+        var active=document.getElementById('active');
+        var line1=document.getElementById('line1');
+        var line2=document.getElementById('line2');
+        var line3=document.getElementById('line3');
+        var line5=document.getElementById('line4');
+        var line5=document.getElementById('line5');
+        line1.onclick=function(){
+            slider.style.transform='translateX(0)';
+            active.style.top='0px';
+        }
+        line2.onclick=function(){
+            slider.style.transform='translateX(-20%)';
+            active.style.top='80px';
+        }
+        line3.onclick=function(){
+            slider.style.transform='translateX(-40%)';
+            active.style.top='160px';
+
+        }
+        line4.onclick=function(){
+            slider.style.transform='translateX(-60%)';
+            active.style.top='240px';
+        }
+        line5.onclick=function(){
+            slider.style.transform='translateX(-80%)';
+            active.style.top='320px';
+        }
+    </script>
+     <footer>
+        <div class="she1">
+          <div class="she2">
+            <img src="logo.png" class="logo111">
+            <p>Shiksha Raksha-A one stop destination for educational empowerment and dropout prevention</p>
+          </div>
+          <div class="she3">
+            <h3 class="footermail">Email Address:</h3>
+            <p>shiksharaksha23@gmail.com</p>
+            <h3 class="footernumber">Contact Number:</h3>
+            <p>+91 9014075818</p>
+          </div>
+          <div class="she4">
+            <h3>Links <div class="underline"><span></span></div></h3>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">About us</a></li>
+              <li><a href="#analysis">Analysis</a></li>
+              <li><a href="solution1.html">Our help</a></li>
+              <li><a href="index.html">Contact</a></li>
+            </ul>
+          </footer>
+    
+</body>
+</html>

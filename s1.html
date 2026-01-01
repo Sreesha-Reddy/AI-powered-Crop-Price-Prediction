@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Crop Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('login.avif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Header styles */
+        .header {
+            width: 100%;
+            background-color: rgba(250, 249, 247, 0.551);
+            padding: 20px 0; /* Adjusted padding to make it fit neatly */
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: right;
+            box-sizing: border-box; /* Ensures padding doesn't affect width */
+        }
+        .header a {
+            color: rgb(56, 212, 75);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+        }
+        .header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 600%;
+            max-width: 400px;
+            padding: 50px;
+            background: rgba(249, 249, 248, 0.818);
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-top: 80px; /* Adds space between header and content */
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .form-group .google-btn {
+            background-color: #4285F4;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: none;
+        }
+        .form-group .google-btn img {
+            width: 20px;
+            margin-right: 10px;
+        }
+        .footer-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-links a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <a class="H" href="TRY.html">HOME</a>
+        <a class="L" href="dashboard.html">LOGIN</a>
+        <a class="B" href="analysis 1.html">ANALYSIS</a>
+        <a class="C" href="a.html">CONTACT US</a>
+    </div>
+
+    <!-- Login Form -->
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="text">Username</label>
+                <input type="text" name="text" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <div class="form-group">
+                <a href="TRY.html"><button type="submit">Login</button></a>
+            </div>
+            <div class="form-group">
+                <button type="button" class="google-btn" id="googleSignIn">
+                    <img src="google.png" alt="Google Logo">
+                    Sign in with Google
+                </button>
+            </div>
+        </form>
+        <div class="footer-links">
+            <a href="signup.html">Register</a> | <a href="forgot_password.html">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+
+        document.getElementById('googleSignIn').addEventListener('click', function() {
+            alert('Google Sign-In clicked');
+        });
+    </script>
+</body>
+</html>
+
+</html>

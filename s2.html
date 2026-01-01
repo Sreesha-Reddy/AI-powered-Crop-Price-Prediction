@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Prediction - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            position: relative;
+            background-image: url('websiteimage.webp');
+            background-size: auto 150%;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(16, 16, 16, 0.6);
+            z-index: -1;
+        }
+
+        nav {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: right;
+        }
+
+        nav ul li {
+            margin-right: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            color: #37812c;
+        }
+
+        nav ul li a:hover {
+            color: #4e8cd2;
+        }
+
+        main {
+            padding: 20px;
+            color: rgb(240, 247, 235);
+        }
+
+        .headline {
+            text-align: left;
+            font-size: 4em;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .p {
+            text-align: left;
+            font-size: 1.2em;
+            margin: 0;
+            padding-top: 10px;
+        }
+
+        .image-container {
+            margin-bottom: 20px; /* Adds space below the image */
+        }
+
+        .container {
+            background-color: #37812c;
+            padding: 20px;
+            color: black;
+            text-align: left;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Center the learn-more text */
+       
+
+        .learn-more-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Layout the text and paragraph beside each other */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .content p {
+            flex: 2;
+            text-align: left;
+            font-size:25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center; /* Center the link */
+            display: block; /* Make the link a block-level element */
+        }
+
+        a:hover {
+            color: #4e8cd2;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="predict.html">Predict</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="headline">OPTIMISE YOUR FARMING<br> STRATEGY</h1><br>
+        <p>Get Accurate Crop Price<br> Predictions Today</p>
+    </main>
+
+    <!-- Container Section with Two Containers Stacked Vertically -->
+    <div class="container">
+        <a href="https://www.cropprophet.com/">LEARN MORE↡</a>
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Cost prediction advantages</h1><br>
+            <h4>Farming has evolved significantly from traditional<br> practices to a data-driven industry. Modern agriculture<br> uses technology, science,<br>and data analytics to enhance<br> crop yield, sustainability, and profitability.</h4>
+            <p>➤Improved Decision-Making for Farmers<br><br>➤Risk Management<br><br>➤Supply Chain Efficiency<br><br>➤Market Stability<br><br>➤Increased Profitability</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Crop Prediction
+    </footer>
+</body>
+</html>
