@@ -88,7 +88,7 @@ Josthna Nomula
 
 P.Nikshiptha Reddy
 
-Y. Sreesha Reddy
+Y. Sai Sreesha
 
 ## 🏆 Hackathon Achievement
 - **Smart India Hackathon (SIH)**
